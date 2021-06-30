@@ -316,9 +316,11 @@ public class ProjectService {
 	// ----------------------------------------------------------
 	// 프로젝트 생성
 	@Transactional
-	public String CreateProject(ProjectVo project,P_DetailVo p_detail, List<P_SkillVo> skill, List<P_MemberVo> member) {
+	public String CreateProject(ProjectVo project,P_DetailVo p_detail, 
+					List<P_SkillVo> skill, List<P_MemberVo> member) {
 		ProjectDao dao = sqlsession.getMapper(ProjectDao.class);
 		
+		// 프로젝트 insert
 		dao.setProjectInsert(project);
 		
 		// 프로젝트 테이블 먼저 insert 후 project_id 값 리턴이 된다.
@@ -650,14 +652,22 @@ public class ProjectService {
 	public int ToHandOverAuth(ApplyVo apply, P_MemberVo member, AlarmVo alarm) {
 		ProjectDao dao = sqlsession.getMapper(ProjectDao.class);
 		AlarmDao alarmdao = sqlsession.getMapper(AlarmDao.class);
+		MemberDao memberdao = sqlsession.getMapper(MemberDao.class);
 		
 		// 리더 변경
 		int result = dao.ToHandOverAuth(apply);
+		M_AuthVo mauth = new M_AuthVo("3",apply.getMember_id());
+		memberdao.UpdateAuth(mauth);
+		
 		// 리더 -> 멤버로 변경
 		dao.ReaderMemberChange(member);
+		M_AuthVo memberCh = new M_AuthVo("2",member.getMember_id());
+		memberdao.UpdateAuth(memberCh);
 		
 		// 권한 받은 멤버 삭제
 		dao.getAuthMemberDel(apply);
+		
+		
 		
 		//알림 테이블 인서트
 		alarmdao.insertAlarm(alarm);

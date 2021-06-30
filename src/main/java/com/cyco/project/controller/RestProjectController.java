@@ -315,6 +315,7 @@ public class RestProjectController {
 		} else {
 			returnUrl = "false";
 		}
+		ChangeAuth chau = new ChangeAuth("ROLE_MEMBER");
 
 		return returnUrl;
 	}
