@@ -22,11 +22,11 @@ CYCODING은 1개월 동안 준비한 비트캠프 3조의 파이널 프로젝트
 
 ### 프로젝트 기본 설정
 ![image](https://user-images.githubusercontent.com/76239872/124426217-b3738700-dda4-11eb-9ced-20bc68952196.png)
-기본 폰트 : font-family : Noto Sans, ROboto
-텍스트 에디터 폰트, 코드 폰트 : hack, Arial, "Helvetica Neue", Helvetica, sans-serif
-제목용 텍스트 크기는 21px
-본문 텍스트 크기는 16px
-표 내부 폰트 크기는 14px
+* 기본 폰트 : font-family : Noto Sans, ROboto
+* 텍스트 에디터 폰트, 코드 폰트 : hack, Arial, "Helvetica Neue", Helvetica, sans-serif
+* 제목용 텍스트 크기는 21px
+* 본문 텍스트 크기는 16px
+* 표 내부 폰트 크기는 14px
 
 
 ### 개발 환경
