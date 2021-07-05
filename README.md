@@ -54,13 +54,12 @@ Build Tool - Maven
 
 # DATABASE ERD
 <img src = "https://user-images.githubusercontent.com/76239872/124430196-d5bbd380-dda9-11eb-8348-deaa26dfe1da.png" >
-
+<br>
+<br>
 
 # Spring Transaction
-<img src = "https://user-images.githubusercontent.com/76239872/124430986-cbe6a000-ddaa-11eb-9a0e-59a4b3d1bbdd.png" width="100%" height="400px">
-만약 사용자가 입력한 정보가 INSERT 도중에 예외가 발생된다면 <br>
-데이터베이스의 데이터들은 INSERT 작업이 되기 전의 상태로 다시 되돌아가져야 하고, 다시 생성 작업이 진행되어야 할 것입니다. <br>
-이 문제를 해결하기 위해 트랜잭션을 사용하였습니다.
+<img src = "https://user-images.githubusercontent.com/76239872/124432312-71e6da00-ddac-11eb-8c74-4fbcdbacdbcb.png">
+
 <br>
 <br>
 
