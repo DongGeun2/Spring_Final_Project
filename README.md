@@ -57,20 +57,24 @@ Build Tool - Maven
 <br>
 <br>
 
-# Spring Transaction
-<img src = "https://user-images.githubusercontent.com/76239872/124432312-71e6da00-ddac-11eb-8c74-4fbcdbacdbcb.png">
-
-<br>
-<br>
 
 # Mybatis
 <img src="https://user-images.githubusercontent.com/76239872/124433429-b1fa8c80-ddad-11eb-8ce9-ffc3df768a69.png" >
 <br>
 <br>
 
-# Oracle SCHEDULER
+# Oracle - SCHEDULER
 <img src="https://user-images.githubusercontent.com/76239872/124433736-0bfb5200-ddae-11eb-83c6-1fcf6354e2b7.png" >
 <br>
 <br>
 
+# Oracle - Trigger
+<img src="https://user-images.githubusercontent.com/76239872/124434393-cb500880-ddae-11eb-8732-5102285fa67b.png" >
+<br>
+<br>
+
+# Spring Transaction
+<img src = "https://user-images.githubusercontent.com/76239872/124432312-71e6da00-ddac-11eb-8c74-4fbcdbacdbcb.png">
+<br>
+<br>
 
