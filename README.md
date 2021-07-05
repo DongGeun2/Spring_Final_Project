@@ -55,3 +55,10 @@ Build Tool - Maven
 <img src = "https://user-images.githubusercontent.com/76239872/124430196-d5bbd380-dda9-11eb-8348-deaa26dfe1da.png" >
 
 
+# Spring Transaction
+<img src = "https://user-images.githubusercontent.com/76239872/124430652-64305500-ddaa-11eb-9787-56b87a02d70b.png" >
+만약 사용자가 입력한 정보가 INSERT 도중에 예외가 발생된다면 <br>
+데이터베이스의 데이터들은 INSERT 작업이 되기 전의 상태로 다시 되돌아가져야 하고, 다시 생성 작업이 진행되어야 할 것입니다.
+이 문제를 해결하기 위해 트랜잭션을 사용하였습니다.
+
+
