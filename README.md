@@ -75,13 +75,20 @@ Build Tool - Maven
 <br>
 
 # 트러블 슈팅
+프로젝트를 진행하는중 발생하는 트러블에 대해서 구글드라이브에 공유를 하여 각 문제점과 해결방안을 팀원과 공유하면서 프로젝트를 진행하였습니다.
+그로인해 각 작업중 같은 문제점이 발생하게 될 시 공유된 해경방안으로 쉽게 해결이 가능했으며, 많은 도움이 되었습니다.
 <img src = "https://user-images.githubusercontent.com/76239872/124436771-4aded700-ddb1-11eb-96b5-e9613f2593a5.png">
 <img src = "https://user-images.githubusercontent.com/76239872/124436845-61852e00-ddb1-11eb-8323-993739acf377.png">
 <br>
 <br>
 
 # 형상관리
-Git
+Git - 
+각자의 이름으로 브랜치를 따서 작업하였고 <br>
+먼저 내 컴퓨터에 저장되어 있는 개인 저장소인 로컬 Repository에서 원격 개인 저장소인 Origin Repository로 push하였습니다. <br>
+다음으로 다음 버전이 나오기 전 개발 내역을 병합하는 디벨로퍼 브랜치에 pull request를 보내고 <br>
+큰 변경사항이 있을 때에 버전을 관리할 수 있는 main 브랜치에 merge하는 방식으로 작업을 진행하였습니다. <br>
+
 <img src = "https://user-images.githubusercontent.com/76239872/124435991-82994f00-ddb0-11eb-8e37-49bceb8b48c3.png">
 <br>
 <br>
