@@ -26,7 +26,6 @@ CYCODING은 1개월 동안 준비한 비트캠프 3조의 파이널 프로젝트
 <img src ="https://user-images.githubusercontent.com/76239872/124429347-bcfeee00-dda8-11eb-902f-b9387c367c6d.png" >
 
 * 기본 폰트 : font-family : Noto Sans, ROboto
-* 텍스트 에디터 폰트, 코드 폰트 : hack, Arial, "Helvetica Neue", Helvetica, sans-serif
 * 제목용 텍스트 크기는 21px
 * 본문 텍스트 크기는 16px
 * 표 내부 폰트 크기는 14px
@@ -41,6 +40,8 @@ DB - OracleDB
 Framework - MyBatis, Spring 4
 Build Tool - Maven
 ```
+<br>
+<br>
 
 # 프로젝트 구성
 <img src = "https://user-images.githubusercontent.com/76239872/124429020-4eba2b80-dda8-11eb-8afd-fede0acf3e0c.png" >
@@ -60,10 +61,15 @@ Build Tool - Maven
 만약 사용자가 입력한 정보가 INSERT 도중에 예외가 발생된다면 <br>
 데이터베이스의 데이터들은 INSERT 작업이 되기 전의 상태로 다시 되돌아가져야 하고, 다시 생성 작업이 진행되어야 할 것입니다. <br>
 이 문제를 해결하기 위해 트랜잭션을 사용하였습니다.
+<br>
+<br>
 
 # Mybatis
 <img src="https://user-images.githubusercontent.com/76239872/124431323-2f70cd80-ddab-11eb-97e9-a86c6620a888.png" >
-
-
-
+마이바티스에서  다이나믹쿼리 사용예시입니다. <br>
+관리자페이지에서 마이페이지나 프로젝트 생성시 필요한 기술/포지션/분야 리스트들을 수정할 필요가 있습니다. <br>
+그래서 각각 항목마다 추가 할 수 있는 기능을 만들었습니다. 여기 이 항목들의 테이블 이름과 컬럼명만 다를 뿐 구조는 비슷합니다. <br>
+그렇기 때문에 DAO를 하나하나 만들어주는 것은 비효율적이라고 생각되어서 하나의 DAO에서 모두 해결하기로 했습니다. <br>
+<br>
+<br>
 
