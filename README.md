@@ -59,7 +59,7 @@ Build Tool - Maven
 
 
 # Mybatis
-<img src="https://user-images.githubusercontent.com/76239872/124434799-46192380-ddaf-11eb-89fe-6ad255921465.png" >
+<img src="https://user-images.githubusercontent.com/76239872/124434897-634df200-ddaf-11eb-866e-36005a5e137a.png" >
 <br>
 <br>
 
