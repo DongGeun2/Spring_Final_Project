@@ -33,7 +33,7 @@ CYCODING은 1개월 동안 준비한 비트캠프 3조의 파이널 프로젝트
 <br>
 <br>
 
-### 개발 환경
+# 개발 환경
 ```BASH
 Programming Language - Java 1.8
 IDE - Eclipse
@@ -41,3 +41,7 @@ DB - OracleDB
 Framework - MyBatis, Spring 4
 Build Tool - Maven
 ```
+
+# 프로젝트 구성
+<img src = "https://user-images.githubusercontent.com/76239872/124429020-4eba2b80-dda8-11eb-8afd-fede0acf3e0c.png" >
+
