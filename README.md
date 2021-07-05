@@ -83,7 +83,7 @@ Build Tool - Maven
 <br>
 
 # 형상관리
-Git - 
+Git - <br>
 각자의 이름으로 브랜치를 따서 작업하였고 <br>
 먼저 내 컴퓨터에 저장되어 있는 개인 저장소인 로컬 Repository에서 원격 개인 저장소인 Origin Repository로 push하였습니다. <br>
 다음으로 다음 버전이 나오기 전 개발 내역을 병합하는 디벨로퍼 브랜치에 pull request를 보내고 <br>
