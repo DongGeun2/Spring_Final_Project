@@ -74,3 +74,9 @@ Build Tool - Maven
 <br>
 <br>
 
+# 형상관리
+Git
+<img src = "https://user-images.githubusercontent.com/76239872/124435991-82994f00-ddb0-11eb-8e37-49bceb8b48c3.png">
+<br>
+<br>
+
