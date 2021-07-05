@@ -64,11 +64,7 @@ Build Tool - Maven
 <br>
 
 # Mybatis
-<img src="https://user-images.githubusercontent.com/76239872/124431323-2f70cd80-ddab-11eb-97e9-a86c6620a888.png" >
-마이바티스에서  다이나믹쿼리 사용예시입니다. <br>
-관리자페이지에서 마이페이지나 프로젝트 생성시 필요한 기술/포지션/분야 리스트들을 수정할 필요가 있습니다. <br>
-그래서 각각 항목마다 추가 할 수 있는 기능을 만들었습니다. 여기 이 항목들의 테이블 이름과 컬럼명만 다를 뿐 구조는 비슷합니다. <br>
-그렇기 때문에 DAO를 하나하나 만들어주는 것은 비효율적이라고 생각되어서 하나의 DAO에서 모두 해결하기로 했습니다. <br>
+<img src="https://user-images.githubusercontent.com/76239872/124433429-b1fa8c80-ddad-11eb-8ce9-ffc3df768a69.png" >
 <br>
 <br>
 
