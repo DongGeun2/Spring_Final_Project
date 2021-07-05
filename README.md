@@ -74,9 +74,21 @@ Build Tool - Maven
 <br>
 <br>
 
+# 트러블 슈팅
+<img src = "https://user-images.githubusercontent.com/76239872/124436771-4aded700-ddb1-11eb-96b5-e9613f2593a5.png">
+<img src = "https://user-images.githubusercontent.com/76239872/124436845-61852e00-ddb1-11eb-8323-993739acf377.png">
+<br>
+<br>
+
 # 형상관리
 Git
 <img src = "https://user-images.githubusercontent.com/76239872/124435991-82994f00-ddb0-11eb-8e37-49bceb8b48c3.png">
 <br>
 <br>
 
+# CYCO 구성원 : 서태희(조장), 이동근(부조장), 오주환, 이가희, 정아인
+* 서태희 : https://github.com/STAY-TaeHui
+* 이동근 : https://github.com/DongGeun2
+* 오주환 : https://github.com/juhwano
+* 이가희 : https://github.com/Tomas1876
+* 정아인 : https://github.com/aine-jeong
