@@ -1,4 +1,3 @@
-![로고](https://user-images.githubusercontent.com/77667889/121818059-eeabfa00-ccbf-11eb-9b3d-f2d1906ed839.png)
 # CYCODING (사이좋게 코딩하자)
 
 CYCODING은 1개월 동안 준비한 비트캠프 3조의 파이널 프로젝트입니다.
