@@ -44,11 +44,7 @@ Build Tool - Maven
 <br>
 
 # 프로젝트 구성
-<img src = "https://user-images.githubusercontent.com/76239872/124429020-4eba2b80-dda8-11eb-8afd-fede0acf3e0c.png" >
-
-클라이언트의 요청이 들어오면 web.xml을 거쳐 시큐리티, 서블릿 컨텍스트, 루트 컨텍스트를 통과한 뒤 컨트롤러로 진입하게 된다. <br>
-이후 DTO를 타고 Model단인 서비스, DAO를 지나 데이터 베이스까지 오게 된 뒤 다시 모델단을 거치게 됩니다. <br>
-그리고 다시 컨트롤러를 지나 view를 사용자에게 응답하는 구조로 설계하였습니다. <br>
+<img src = "https://user-images.githubusercontent.com/76239872/124435550-11f23280-ddb0-11eb-9118-f0518a51ca98.png" >
 <br>
 <br>
 
