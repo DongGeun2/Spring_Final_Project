@@ -70,7 +70,7 @@ Build Tool - Maven
 <br>
 
 # Spring Transaction
-<img src = "https://user-images.githubusercontent.com/76239872/124432312-71e6da00-ddac-11eb-8c74-4fbcdbacdbcb.png">
+<img src = "https://user-images.githubusercontent.com/76239872/124435773-45cd5800-ddb0-11eb-8435-75e9ead907e0.png">
 <br>
 <br>
 
