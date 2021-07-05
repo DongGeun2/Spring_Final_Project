@@ -23,7 +23,7 @@ CYCODING은 1개월 동안 준비한 비트캠프 3조의 파이널 프로젝트
 <br>
 
 # 프로젝트 기본 설정
-<img src = "https://user-images.githubusercontent.com/76239872/124426217-b3738700-dda4-11eb-9ced-20bc68952196.png" width="100%" heigt="150px">
+<img src = "https://user-images.githubusercontent.com/76239872/124426217-b3738700-dda4-11eb-9ced-20bc68952196.png" width="80%" >
 
 * 기본 폰트 : font-family : Noto Sans, ROboto
 * 텍스트 에디터 폰트, 코드 폰트 : hack, Arial, "Helvetica Neue", Helvetica, sans-serif
