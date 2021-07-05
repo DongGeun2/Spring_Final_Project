@@ -52,6 +52,6 @@ Build Tool - Maven
 <br>
 
 # DATABASE ERD
-<img src = "https://user-images.githubusercontent.com/76239872/124429954-81b0ef00-dda9-11eb-8f65-75020f071cb4.png" >
+<img src = "https://user-images.githubusercontent.com/76239872/124430196-d5bbd380-dda9-11eb-8348-deaa26dfe1da.png" >
 
 
