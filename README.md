@@ -94,7 +94,7 @@ Git - <br>
 <br>
 
 # 협업툴
-<img src = "https://user-images.githubusercontent.com/76239872/124562419-f6ebf500-de79-11eb-8a6d-f7701ad0423b.png"> - 
+<img src = "https://user-images.githubusercontent.com/76239872/124562419-f6ebf500-de79-11eb-8a6d-f7701ad0423b.png" width="150px">
 
 ### 칸반보드
 <img src = "https://user-images.githubusercontent.com/76239872/124562534-18e57780-de7a-11eb-884f-642d9081f412.png">
