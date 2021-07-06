@@ -93,6 +93,19 @@ Git - <br>
 <br>
 <br>
 
+# 협업툴
+<img src = "https://user-images.githubusercontent.com/76239872/124562419-f6ebf500-de79-11eb-8a6d-f7701ad0423b.png"> - 
+
+### 칸반보드
+<img src = "https://user-images.githubusercontent.com/76239872/124562534-18e57780-de7a-11eb-884f-642d9081f412.png">
+<br>
+
+### 타임라인
+<img src = "https://user-images.githubusercontent.com/76239872/124562705-4df1ca00-de7a-11eb-820a-6ea043ed450a.png">
+
+<br>
+<br>
+
 # CYCO 구성원 : 서태희(조장), 이동근(부조장), 오주환, 이가희, 정아인
 * 서태희 : https://github.com/STAY-TaeHui
 * 이동근 : https://github.com/DongGeun2
