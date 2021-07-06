@@ -94,7 +94,8 @@ Git - <br>
 <br>
 
 # 협업툴
-<img src = "https://user-images.githubusercontent.com/76239872/124562419-f6ebf500-de79-11eb-8a6d-f7701ad0423b.png" width="150px">
+<img src = "https://user-images.githubusercontent.com/76239872/124562419-f6ebf500-de79-11eb-8a6d-f7701ad0423b.png" width="150px"> <br>
+- 노션 : 협업에 필요한 칸반보드, 일정관리, 타임라인 등의 다양한 템플릿을 제공해주어 협업에 도움이 많이 되었습니다.
 
 ### 칸반보드
 <img src = "https://user-images.githubusercontent.com/76239872/124562534-18e57780-de7a-11eb-884f-642d9081f412.png">
