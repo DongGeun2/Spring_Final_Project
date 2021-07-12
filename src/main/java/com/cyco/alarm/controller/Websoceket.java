@@ -19,6 +19,7 @@ import org.springframework.stereotype.Controller;
 import com.fasterxml.jackson.core.JsonParseException;
 import com.fasterxml.jackson.databind.JsonMappingException;
 
+import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
 
@@ -55,61 +56,43 @@ public class Websoceket {
         	JSONParser parser = new JSONParser();
 
         	JSONObject  jsonObj = (JSONObject) parser.parse(message);
-        	System.out.println(jsonObj.toString());
+        	System.out.println("jsonObj : " +jsonObj.toString());
         	
-        	String code = (String)jsonObj.get("code");
-            String receiver = (String)jsonObj.get("member_id");
-            String msg = "";
-            String sender = (String)jsonObj.get("loginednickname");
+        	String code = (String)jsonObj.get("alarm_CODE");
+        	
+        	List<String> receiver = new ArrayList<String>();
+        	
+        	if((String)jsonObj.get("member_ID") == null){
+        		System.out.println("수신인이 여럿일 때");
+        		
+        		JSONArray arr = (JSONArray) jsonObj.get("members");
 
-            // 프로젝트에 초대됨
-            if(code.equals("PR_IN")){
-
-            	// 내 프로젝트에 누가 지원함
-            } else if(code.equals("PR_A")) {
-            	
-            	msg = sender + "님께서 회원님의 프로젝트에 지원하셨습니다";
-            	
-            	// 내가 지원 내역이 승인됨
-            } else if(code.equals("PR_S")) {
-            	
-            	msg = "회원님께서 지원하신 프로젝트의 참여가 승인되었습니다";
-            	
-            	// 내 지원 내역이 거절됨
-            } else if(code.equals("PR_F")) {
-            	
-            	msg = "회원님께서 지원하신 프로젝트의 참여가 거절되었습니다";
-            	
-            	// 내가 지원/참여한 프로젝트의 상태가 변경됨(모집/진행/종료)
-            } else if(code.equals("PR_UP")) {
-            	
-            	msg = "회원님의 프로젝트 상태가 변경되었습니다";
-            	
-            	// 누군가 나에게 후기를남김
-            } else if(code.equals("MY_RV")) {
-            	
-            	msg = sender + "님께서 회원님께 후기를 남기셨습니다";
-            	
-            	// 회
-            } else if(code.equals("QNAR")) {
-            	
-            	msg = sender + "님께서 회원님의 질문에 답변을 작성했습니다";
-            	
-            }
+        		for(int i = 0; i < arr.size(); i++) {
+        			receiver.add(arr.get(i).toString());
+        			System.out.println("re : " + receiver.get(i));
+        		}
+        		
+        	} else {
+        		
+        		receiver.add((String)jsonObj.get("member_ID"));
+        		System.out.println("receiver : " + receiver.get(0));
+        	}
            
-            
+            jsonObj.put("sender", session.getUserProperties().get("currentId"));
             //메시지 보내는 부분
-            for(int i =0; i < sessionList.size(); i++) {
-            	
-              if(receiver.equals(sessionList.get(i).getUserProperties().get("currentId"))) {
-            	  	
-            	   System.out.println(sessionList.get(i).getUserProperties().get("currentId")+"에게 메시지 보내기");
-            	   //sessionList.get(i).getAsyncRemote().sendObject(jsonObj);
-            	   sessionList.get(i).getAsyncRemote().sendText(jsonObj.toJSONString());
-               }
-            }
-                    
             
+            for(int i =0; i < receiver.size(); i++) {
+
+              for(int j = 0; j < sessionList.size(); j++) {
+
+            	  if(receiver.get(i).equals(sessionList.get(j).getUserProperties().get("currentId"))) {             	  	
+
+               	   sessionList.get(j).getAsyncRemote().sendText(jsonObj.toJSONString());
+                  }
+            	  
+              }
+            }
+                           
         }catch (Exception e) {
             
             System.out.println("오류 : " + e.getMessage());

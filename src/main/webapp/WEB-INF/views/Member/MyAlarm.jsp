@@ -51,24 +51,21 @@
 											
 												<c:choose>
 												
-													<c:when test="${newlist.ALARM_CODE eq 'PR_IN' || newlist.ALARM_CODE eq 'PR_S' || newlist.ALARM_CODE eq 'PR_F' || newlist.ALARM_CODE eq 'PR_UP'}">
+													<c:when test="${newlist.ALARM_CODE eq 'PR_IN' || newlist.ALARM_CODE eq 'PR_S' || newlist.ALARM_CODE eq 'PR_F' || newlist.ALARM_CODE eq 'PR_UP'
+														|| newlist.ALARM_CODE eq 'PR_EX' || newlist.ALARM_CODE eq 'TM_CH'}">
 														<td class="${newlist.ALARM_CODE}" id="${newlist.URL}"><a href="/project/detail?project_id=${newlist.URL}">${newlist.ALARM_CONTENT}</a></td>
 													</c:when>
 													
 													<c:when test="${newlist.ALARM_CODE eq 'PR_A'}">
-														<td class="${newlist.ALARM_CODE}" id="${newlist.URL}"><a href="/member/detail?member_id=${newlist.URL}">${newlist.ALARM_CONTENT}</a></td>
+														<td class="${newlist.ALARM_CODE}" id="${newlist.URL}"><a href="/member/memberdetailpage?memberid=${newlist.URL}">${newlist.ALARM_CONTENT}</a></td>
 													</c:when>
 													
 													<c:when test="${newlist.ALARM_CODE eq 'MY_RV'}">
-														<td class="${newlist.ALARM_CODE}" id="${newlist.URL}"><a href="#${newlist.URL}">${newlist.ALARM_CONTENT}</a></td>
+														<td class="${newlist.ALARM_CODE}" id="${newlist.URL}"><a href="/member/memberdetailpage?memberid=${newlist.URL}">${newlist.ALARM_CONTENT}</a></td>
 													</c:when>
 													
-													<c:when test="${newlist.ALARM_CODE eq 'QNAR'}">
-														<td class="${newlist.ALARM_CODE}" id="${newlist.URL}"><a href="#${newlist.URL}">${newlist.ALARM_CONTENT}</a></td>
-													</c:when>
-													
-													<c:when test="${newlist.ALARM_CODE eq 'CHAT_O'}">
-														<td class="${newlist.ALARM_CODE}" id="${newlist.URL}"><a href="/messages/">${newlist.ALARM_CONTENT}</a></td>
+													<c:when test="${newlist.ALARM_CODE eq 'PM_BAN'}">
+														<td class="${newlist.ALARM_CODE}" id="${newlist.URL}"><a href="/mypage/myProject">${newlist.ALARM_CONTENT}</a></td>
 													</c:when>
 													
 												</c:choose>

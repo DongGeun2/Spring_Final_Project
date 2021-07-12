@@ -23,6 +23,8 @@ import com.cyco.member.vo.V_Duration;
 import com.cyco.member.vo.V_MlistVo;
 import com.cyco.member.vo.V_myProjectVo;
 import com.cyco.project.vo.P_DetailVo;
+import com.cyco.project.vo.P_DurationVO;
+import com.cyco.project.vo.P_MemberVo;
 
 
 @Repository
@@ -63,6 +65,11 @@ public interface MemberDao {
 	//로그인시 받은 알림 있는지 체크
 	public Integer getOldAlarm(String memberid);
 	
+	//로그인시 참여중인(팀장으로) 프로젝트 있는지 체크
+	public List<P_DetailVo> isProjectManager(String memberid);
+	//로그인시 참여중인(멤버로) 프로젝트 있는지 체크
+	public List<HashMap<String, String>> isInProject(String memberid);
+	
 	//마이페이지 개인정보 가져오기
 	public MemberVo getMyDetail(String useremail);
 	
@@ -70,9 +77,7 @@ public interface MemberDao {
 	public Integer editProfile(String id, String filename);
 	
 	//마이페이지 개인정보 수정
-	public Integer editPersnalInfo(String column, String info, int userid);
-	//마이페이지 개인정보 수정 시 닉네임 중복체크
-	
+	public Integer editPersnalInfo(String column, String info, int userid);	
 	
 	//마이페이지+회원상세 기술 가져오기
 	public List<SkillVo> getSkills();
@@ -87,7 +92,7 @@ public interface MemberDao {
 	public List<MemberDetailPageVo> getPreferPosition(String userid);
 	
 	//마이페이지+회원상세 기간 가져오기
-	public List<V_Duration> getDurations();
+	public List<P_DurationVO> getDurations();
 	
 	//마이페이지+회원상세 선호 기간 가져오기
 	public List<MemberDetailPageVo> getPreferDurations(String userid);
@@ -123,6 +128,8 @@ public interface MemberDao {
 	//위의 함수로 체크했을 때, 보너스 포인트 받은 적 없으면포인트 지급(최초 1회)
 	public Integer givePointFirstTime(String member_id);
 	
+	//마이페이지 회원 탈퇴시 팀장인지 확인
+	public Integer isTeamManager(String quit_id);
 	//마이페이지 회원 탈퇴시 탈퇴날짜 업데이트
 	public Integer updateDeleteDate(String quit_id);
 	
@@ -183,5 +190,19 @@ public interface MemberDao {
 	//로그인한 회원이 해당 프로젝트에 남긴 리뷰 조회
 	public List<MyReviewVo> getMyProjectReview(String projectid, String memberid);
 	
-
+	//이메일, 비밀번호 찾기
+	//이메일찾기 전 해당 유저의 정보가 존재하는지 확인
+	public int beforeFindEmail(String userName, String userPhone);
+	//이메일찾기
+	public String findEmail(String userName, String userPhone);
+	
+	//비밀번호찾기 전 해당 유저의 정보가 존재하는지 확인
+	public int beforeFindPwd(String userName, String userEmail);
+	
+	//비밀번호찾기 인증 완료 후 비밀번호 변경
+	public void findPwdEdit(String userEmail, String userPwd);
+	
+	//패널티 먹으면 패널티 업뎃
+	public int penalyMember(String member_id);
+	
 }

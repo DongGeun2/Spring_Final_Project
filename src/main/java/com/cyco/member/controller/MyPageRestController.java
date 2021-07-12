@@ -1,7 +1,8 @@
 package com.cyco.member.controller;
 
+
 import java.util.ArrayList;
-import java.util.Date;
+import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
@@ -16,22 +17,24 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.cyco.common.vo.Apply_Join_P_datailVo;
 import com.cyco.common.vo.BookMark_Join_P_detailVo;
+import com.cyco.common.vo.M_AuthVo;
 import com.cyco.common.vo.PositionVo;
 import com.cyco.common.vo.SkillVo;
 import com.cyco.member.dao.MemberDao;
+import com.cyco.member.security.ChangeAuth;
 import com.cyco.member.service.MemberDetailService;
 import com.cyco.member.service.MemberService;
 import com.cyco.member.vo.M_ExperienceVo;
 import com.cyco.member.vo.MemberDetailPageVo;
 import com.cyco.member.vo.MyProject_Join_Member;
 import com.cyco.member.vo.MyReviewVo;
-import com.cyco.member.vo.ReviewVo;
-import com.cyco.member.vo.V_Duration;
+import com.cyco.project.vo.P_DurationVO;
 
 @RequestMapping("mypage/ajax/")
 @RestController
 public class MyPageRestController {
-
+	
+	@Autowired
 	MemberService memberservice;
 	MemberDetailService memberdetailservice;
 	// MemberVo member;
@@ -141,30 +144,6 @@ public class MyPageRestController {
 		return result;
 	}
 	
-
-	/*
-	 * //회원 프로필 이미지 바꾸기
-	 * 
-	 * @RequestMapping(value="editprofile",method =
-	 * {RequestMethod.POST,RequestMethod.GET}) public String
-	 * changeProfile(@RequestParam(value="id",required=false)String
-	 * id, @RequestParam(value="uploadFile",required=false) MultipartFile
-	 * uploadFile, MultipartHttpServletRequest request) { //public String
-	 * changeProfile(String id, MultipartFile uploadFile,
-	 * MultipartHttpServletRequest request) { System.out.println("프로필 이미지 변경");
-	 * 
-	 * // 파일 유틸 생성 UtilFile utilFile = new UtilFile();
-	 * 
-	 * // 받아오는 파일 받아오기 String UploadFile = utilFile.FileUpload(request, uploadFile);
-	 * String UploadFilename = utilFile.getFilename();
-	 * 
-	 * 
-	 * int row = memberdetailservice.editProfile(id, UploadFilename); String result
-	 * = "fail"; if(row > 0) { result = "success"; }
-	 * 
-	 * return result; }
-	 * 
-	 */
 	// 모달창에 기술 태그 뿌리기
 	@RequestMapping(value = "getskills")
 	public List<SkillVo> getSkills() {
@@ -195,9 +174,9 @@ public class MyPageRestController {
 
 	// 모달창에 선호 기간 태그 뿌리기
 	@RequestMapping(value = "getdurations")
-	public List<V_Duration> getDurations() {
+	public List<P_DurationVO> getDurations() {
 
-		List<V_Duration> list = new ArrayList<V_Duration>();
+		List<P_DurationVO> list = new ArrayList<P_DurationVO>();
 
 		System.out.println(memberdetailservice.getDurations().toString());
 
@@ -329,9 +308,7 @@ public class MyPageRestController {
 	@RequestMapping(value="updateexperiences", method= {RequestMethod.GET, RequestMethod.POST})
 	public String updateExperiences(@RequestParam String member_id_input, @RequestParam String ex_count_input ,@RequestParam String exp_title_input,
 			@RequestParam String ex_position_input, @RequestParam String ex_skill_input, @RequestParam String ex_content_input,@RequestParam String ex_duration_input) {
-	//public String editExperiences(String ex_count_input , String EXP_TITLE_input, String EX_POSITION_input,
-	//		String EX_SKILL_input, String EX_CONTENT_input, String EX_DURATION_input) {
-	//public String updateExperiences(@RequestParam String member_id_input, @RequestParam String ex_count_input, ) {
+
 		 System.out.println("프로젝트 경험 수정하기");
 		 M_ExperienceVo mex = new M_ExperienceVo();
 
@@ -383,26 +360,31 @@ public class MyPageRestController {
 	
 	//모든 정보 입력시 포인트 최초 지급
 	@RequestMapping(value="givepoint",method=RequestMethod.POST)
-	public String givePointFirstTime(String member_id) {
-		
-		System.out.println("들어왔나?");
-		
+	public String givePointFirstTime(String member_id) {	
+		System.out.println("포인트 지급");
 		String result = memberdetailservice.givePointFirstTime(member_id);
 		 
-		 return result;
+		return result;
 	}
 
-	// 회원이 탈퇴 누르면 DB에 있는 탈퇴날짜 업데이트 하는 함수
+	// 회원이 탈퇴 누르면 DB에 있는 탈퇴날짜 업데이트
 	@RequestMapping(value = "updatedeletecount", method = RequestMethod.POST)
 	public String submitQuit(String quit_id) {
-
-		int result = memberdetailservice.updateDeleteDate(quit_id);
+		
 		String msg = "fail";
-
-		if (result > 0) {
-			msg = "success";
+		
+		//프로젝트 팀장인지 확인
+		int isTeamManager = memberdetailservice.isTeamManager(quit_id);
+		
+		if(isTeamManager > 0) {
+			//작성한 프로젝트가 있으면 탈퇴 반려
+			msg = "teammanager";
+		} else {
+			int result = memberdetailservice.updateDeleteDate(quit_id);
+			if (result > 0) {
+				msg = "success";
+			}
 		}
-
 		return msg;
 
 	}
@@ -413,10 +395,6 @@ public class MyPageRestController {
 
 		String useremail = data.get("useremail");
 		String userPwd = data.get("userPwd");
-
-		System.out.println("비동기컨트롤러 mypageCheck 진입");
-		System.out.println("useremail: " + useremail);
-		System.out.println("userPwd: " + userPwd);
 
 		if (memberdetailservice.checkPwd(data)) {
 			return true;
@@ -499,6 +477,20 @@ public class MyPageRestController {
 	  return myprojectReview;
   }
   
+  //모든 정보 작성했을 때 준회원에서 회원으로 권한 업데이트
+  @RequestMapping(value="makememberauth", method = RequestMethod.GET)
+  public Boolean makeMemberAuth(@RequestParam String member_id, @RequestParam String authority_id) {
+	  
+	  M_AuthVo mauth = new M_AuthVo(authority_id,member_id);
+	  Boolean bo = memberservice.UpdateAuth(mauth);
+	  
+	  //시큐리티 권한 변경
+	  ChangeAuth chau = new ChangeAuth("ROLE_MEMBER");
+	  
+	  System.out.println("newAuth " + chau.toString());
+	  
+	  return bo;
+  }
   
   	//후기작성시 포인트 지급
 	@RequestMapping(value="giveReviewpoint",method=RequestMethod.POST)
@@ -507,6 +499,16 @@ public class MyPageRestController {
 		memberdetailservice.giveReviewPoint(String.valueOf(session.getAttribute("member_id")));
 		
 		return "givePoint";
+	}
+	
+	//페이지 이동시마다 프로젝트 있는지 확인
+	@RequestMapping(value="checkhasproject", method = RequestMethod.GET)
+	public String checkHasProject(@RequestParam String id) {
+		
+		HashMap<String, String> project = memberservice.hasProject(id);
+		
+		return project.get("project_id");
+		
 	}
 
 }
