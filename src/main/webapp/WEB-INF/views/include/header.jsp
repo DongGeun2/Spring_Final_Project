@@ -350,6 +350,8 @@ var hideMenu;
 var thisShow;
 var checkLi;
 
+// 알람 패널추
+
 $('#MenuToggle > li > div').click(function(){
 
 	if($(this).attr("id") == "alarm_panel"){
