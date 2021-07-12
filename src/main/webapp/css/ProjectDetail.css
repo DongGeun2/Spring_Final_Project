@@ -27,7 +27,16 @@ p{
 	margin-left: 10px !important;
 }
 
-
+.Badge{
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background-color: #CA8FAB;
+    display: inline-block;
+    position: absolute;
+    transform: translate(-10px, 4px);
+    cursor: pointer;
+}
 
 .ProjectDetail_p{
 	width: 100%;
@@ -418,6 +427,7 @@ p{
     border: 0.0625rem solid #D1D5DB;
     padding: 2rem 2rem 1rem 2rem;
     border-top: none;
+    margin-bottom: 30px;
 }
 
 .Project_memberList{
@@ -483,7 +493,20 @@ p{
     padding: 0;
     width: 130px;
 }
-
+.ApplyComple{
+	color: #C0A9BD;
+    background-color: white;
+    border: 0.0625rem solid #C0A9BD;
+    padding: 0;
+    width: 130px;
+    cursor: not-allowed !important;
+}
+.ApplyComple:hover{
+	color: #C0A9BD !important;
+    background-color: white !important;
+    border: 0.0625rem solid #C0A9BD !important;
+    cursor: not-allowed !important;
+}
 
 
 .BtnWarp >input:hover{
@@ -573,7 +596,6 @@ p{
 }
 
 .ProjectContent{
-	margin-top: 3%;
   	width: 97%;
     float: left;
     font-size: 1rem;
@@ -701,8 +723,13 @@ p{
 	width: 30px;
     height: 15%;
     border-radius: 15px;
-    border: 0.0625rem solid #D1D5DB;
     display: inline-block;
+    text-align: center;
+}
+
+.memberImg_Box > img{
+	border-radius: 15px;
+    object-fit: cover;	
 }
 
 .member_list{
@@ -712,7 +739,7 @@ p{
 .member_nickname{
 	font-size: 5px;
 	margin: 3px 0 0 5px !important;
-
+	padding-left: 5px;
 }
 .member_skills{
 	font-size: 3px;
@@ -817,7 +844,7 @@ p{
     font-weight: bold !important;
     font-size: 19px !important;
     text-align: left;
-    margin-bottom: 0 !important;
+    margin-bottom: 7 !important;
 }
 .ApplyMemberListCancleBtn{
     background: none;
@@ -850,7 +877,7 @@ p{
 }
 
 .ApplyMemberListBtn_Ok{
-    width: 34%;
+    width: 42px;
     color: white;
     background-color: #C0A9BD;
     border: 0.0625rem solid #C0A9BD;
@@ -859,7 +886,7 @@ p{
 }
 
 .ApplyMemberListBtn_No {
-    width: 34%;
+    width: 42px;
     color: #C0A9BD;
     background-color: white;
     border: 0.0625rem solid #C0A9BD;
@@ -911,7 +938,6 @@ p{
     background-clip: padding-box;
     border: 0.0625rem solid #D1D5DB;
     padding: 2rem;
-    margin-top: 30px;
 }
 
 memberListBox{
@@ -940,12 +966,12 @@ memberListBox{
 .memberList_skills{
 	display: inline-block;
     font-size: 13px;
-    margin-left: 17px;
+    margin-left: 7px;
 }
 
 .memberinfoBox{
 	display: inline-block;
-    margin-left: 4px;
+    margin-left: 8px;
 }
 
 .MemberSuperintend_list_Btn{
@@ -1010,8 +1036,8 @@ memberListBox{
    */
 
 .memberListImgBox{
-    width: 25px;
-    height: 25px;
+    width: 35px;
+    height: 35px;
     border-radius: 15px;
     border: 0.0625rem solid #D1D5DB;
     display: inline-block;
@@ -1021,6 +1047,11 @@ memberListBox{
     align-items: center;
     position: relative;
     top: -14px;
+}
+
+.memberListImgBox > img{
+	border-radius: 15px;
+    object-fit: cover;
 }
 
 
@@ -1230,6 +1261,11 @@ memberListBox{
     padding: 0;
 }
 
+.QnaBtnRightBox >input:hover{
+	font-weight: 600;
+}
+
+
 .QnaBtnRightBox >p{
 	display: inline-block;
     font-size: .75rem;
@@ -1259,29 +1295,23 @@ memberListBox{
 	display: inline-block;
     width: 100%;
     margin: 0 !important;
-    padding: 0 !important;
+    padding: 7px !important;
     text-align: right;
     background: white;
 }
 
 
 .ReplyWriteBtn{
-	border: 0.0625rem solid #CA8FAB;
-    background-color: #CA8FAB;
-    border-radius: 8px;
-    color: white;
-    width: 40px;
-    font-size: 16px;
-    height: 27px;
-    padding: 2px;
-    text-align: center;
-    display: inline-block;
-    margin: 5px;
+	border: none;
+    background-color: white;
+    outline: none;
+    font-size: .75rem;
+    color: #c9c9d9;
+    padding: 0;
 }
 
 .ReplyWriteBtn:hover{
-	color: #F4F2F3;
-	background-color: #b46088;
+	font-weight: 500;
 }
 
 .colorBox{
@@ -1299,8 +1329,8 @@ memberListBox{
 }
 
 .disabled{
-	border: none;
-    pointer-events: none;
+	border: none !important;
+    pointer-events: none !important;
 	
 }
 
@@ -1333,4 +1363,177 @@ memberListBox{
     font-size: 12px !important;
     text-align: left;
     margin: 0 !important;
+}
+
+.ProjectCompleteBtn{
+	margin: 0;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #4B5563;
+    background-color: #f4f2f3;
+    text-align: center;
+    border: 0.0625rem solid #D1D5DB;
+    padding: 8px;
+    display: inline-block;
+    color: #4B5563;
+}
+
+.complete_Ok{
+	width: 45%;
+    color: white;
+    background-color: #C0A9BD;
+    border: 0.0625rem solid #C0A9BD;
+    padding: 5px;
+    margin: 3px;
+}
+
+.complete_No{
+	width: 45%;
+    color: #C0A9BD;
+    background-color: white;
+    border: 0.0625rem solid #C0A9BD;
+    padding: 5px;
+    margin: 3px;
+}
+
+.MemberFeedBox{
+	width: 97%;
+    float: left;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #4B5563;
+    border: 0.0625rem solid #D1D5DB;
+    background-color: white;
+    background-clip: padding-box;
+    padding: 2rem 2rem 1rem 2rem;
+    border-top: none;
+}
+
+.FeedBtnBox{
+	width: 100%;
+    text-align: right;
+}
+
+
+.feedTitle{
+	width: 91%;
+	min-height: 35px;
+	display: block;
+	outline: none;
+	resize: none;
+	border: 0.0625rem solid #D1D5DB;
+    margin: 0 auto;
+    margin-bottom: 5px;
+    padding: 4px 8px;
+    font-size: 0.8rem;
+}
+
+.FeedTitle >p{
+	display: inline-block;
+	margin: 0 6px 0 0!important;
+	padding: 0 !important;
+}
+
+.FeedTitle >input{
+   word-break: break-all;
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: -.3px;
+    resize: none;
+    display: inline-block;
+    width: 70%;
+    border: 0.0625rem solid #D1D5DB;
+}
+
+.feedcontent{
+	width: 91%;
+	min-height: 120px;
+	display: block;
+	outline: none;
+	resize: none;
+	border: 0.0625rem solid #D1D5DB;
+    margin: 0 auto;	
+    margin-bottom: 5px;
+    padding: 10px;
+    font-size: 0.8rem;
+}
+
+.FeedWrite{
+    width: 45%;
+    color: white;
+    background-color: #C0A9BD;
+    border: 0.0625rem solid #C0A9BD;
+    padding: 5px;
+    margin: 3px;
+}
+
+
+.FeedWrite:hover{
+	color: #F4F2F3;
+	background-color: #b46088;
+}
+
+
+.Feedcancel{
+	width: 45%;
+    color: #C0A9BD;
+    background-color: white;
+    border: 0.0625rem solid #C0A9BD;
+    padding: 5px;
+    margin: 3px;
+}
+
+.FeedTitle{
+	font-size: 16px;
+    font-weight: 500;
+    line-height: 1.5;
+    letter-spacing: -.3px;
+    color: #323232;
+    margin-bottom: 4px;
+}
+
+.FeedContent{
+   width:  100%;
+}
+
+.FeedContent > textarea{
+	color: #737373;
+	word-break: break-all;
+	font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: -.3px;
+    resize: none;
+    margin-left: 20px;
+    min-height: 150px;
+    width: 100%;
+    border: 0.0625rem solid #D1D5DB;
+}
+
+.FeedBtnBox{
+	width: 100%;
+	display: inline-block;
+}
+
+.FeedBtnBox > input{
+	display: inline-block;
+	border: none;
+    background-color: white;
+    outline: none;
+    font-size: .75rem;
+    color: #c9c9d9;
+    padding: 0;
+}
+
+.FeedBtnBox > input:hover{
+	font-weight: 600;
+}
+
+.FeedBtnBox> p{
+	display: inline-block;
+    font-size: .75rem;
+    color: #c6c6d7;
+    cursor: default;
+    margin: 0 .3rem 0 0.3rem !important;
 }
