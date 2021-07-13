@@ -43,6 +43,12 @@ Build Tool - Maven
 <br>
 <br>
 
+### AWS 서버 배포
+### ec2-3-37-250-159.ap-northeast-2.compute.amazonaws.com
+<br>
+<br>
+
+
 # 프로젝트 구성
 <img src = "https://user-images.githubusercontent.com/76239872/124435550-11f23280-ddb0-11eb-9118-f0518a51ca98.png" >
 <br>
