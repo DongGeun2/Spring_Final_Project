@@ -39,6 +39,8 @@ IDE - Eclipse
 DB - OracleDB 
 Framework - MyBatis, Spring 4
 Build Tool - Maven
+Server - AWS
+형상관리 : Git , GitHub , 노션
 ```
 <br>
 <br>
