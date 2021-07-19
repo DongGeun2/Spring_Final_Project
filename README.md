@@ -115,7 +115,7 @@ Git - <br>
 <br>
 <br>
 
-# CYCO 구성원 : 서태희(조장), 이동근(부조장), 오주환, 이가희, 정아인
+# CYCO 구성원 : 서태희, 이동근, 오주환, 이가희, 정아인
 * 서태희 : https://github.com/STAY-TaeHui
 * 이동근 : https://github.com/DongGeun2
 * 오주환 : https://github.com/juhwano
