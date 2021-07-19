@@ -44,7 +44,7 @@ Build Tool - Maven
 <br>
 
 ### AWS 서버 배포
-### [Cycoding 이동하기](ec2-3-37-250-159.ap-northeast-2.compute.amazonaws.com)
+### [Cycoding 이동하기](https://ec2-3-37-250-159.ap-northeast-2.compute.amazonaws.com)
 <br>
 <br>
 
